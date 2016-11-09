@@ -1,2 +1,0 @@
-# vinnovera
-vinnovera arbetsprov

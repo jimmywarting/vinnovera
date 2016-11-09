@@ -1,0 +1,31 @@
+<template>
+  <require from="src/css/default.css"></require>
+
+  <header class="row">
+    <img class="logo" src="src/img/logo.png">
+  </header>
+
+  <div class="row">
+    <section id="search">
+      <h2 class="heading">How's the weather in...</h2>
+      <form submit.trigger="addLocation()" class="search-box">
+        <label class="label" for="location">Location:</label>
+        <input type="search" id="location" value.bind="location" placeholder="Paris">
+        <button type="submit" class="btn search-btn">Search</button>
+      </form>
+    </section>
+  </div>
+
+  <require from='./weather-card'></require>
+
+	<ul class="weather-cards">
+		<li repeat.for="weather of locations" class="item">
+			<weather-card weather.bind="weather" destroy.bind="$parent.removeLocation"></weather-card>
+		</li>
+	</ul>
+
+  <footer class="row">
+    <img class="logo" src="src/img/logo.png">
+  </footer>
+
+</template>

@@ -1,0 +1,8 @@
+<template>
+  <div class="weather-card" style="background: ${weather.color}">
+    <span class="icon icon-${weather.data.weather[0].icon}">${description}</span>
+    <span class="temperature">${weather.celcius} <span class="degrees"><sup>o</sup>C</span></span>
+    <h1 class="location">${weather.data.name}</h1>
+    <a href="#" click.delegate="destroy(weather)" class="close">Close</a>
+  </div>
+</template>

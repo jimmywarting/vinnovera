@@ -1,0 +1,313 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(-234deg,  #f7f4d6 35%, #abd4e2 100%);
+	background-size: cover;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.logo {
+  margin: 66px 0 98px;
+}
+
+#search {
+  background-color: rgba(255, 255, 255, .57);
+  width: 513px;
+  height: 178px;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+#search h2 {
+  font-family: 'Pacifico', cursive;
+  margin: 34px 0 0;
+}
+
+#search input {
+  /* Safari didn't want to remove border with [type=search] */
+  -webkit-appearance: none;
+
+  width: 100%;
+  border: 0;
+}
+
+#search form {
+  background: white;
+  margin: 12px 49px;
+  position: relative;
+  height: 42px;
+}
+
+#search form:before,
+#search form:after {
+  z-index: -1;
+  content: '';
+  width: 100%;
+  height: 100px;
+  display: block;
+  position: absolute;
+  transform: skew(45deg) translateX(49px);
+  background: linear-gradient(to bottom, rgba(130,130,130,.1) 0%, rgba(130,130,130,0) 100%);
+}
+
+#search form:before {
+  transform: skew(45deg) translateX(49px);
+  width: 40px;
+  right: 0px;
+}
+
+#search label {
+  position: absolute;
+  font-weight: bold;
+  left: 22px;
+  line-height: 42px;
+}
+
+input {
+  border: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 50px 0 92px;
+  height: 42px;
+  font-size: 14px;
+}
+
+button {
+  position: absolute;
+  right: 17px;
+  top: 12px;
+  overflow: hidden;
+  height: 17px;
+  width: 17px;
+  text-indent: -999px;
+  border: 0;
+  background: 0;
+  cursor: pointer;
+}
+button:after,
+button::before {
+  content: '';
+  position: absolute;
+  background: #c7dd34;
+}
+button:before {
+  width: 100%;
+  top: 7px;
+  left: 0;
+  height: 3px;
+}
+
+button:after {
+  height: 100%;
+  top: 0;
+  left: 7px;
+  width: 3px;
+}
+
+
+.weather-card {
+	color: #ffc0cb;
+	background: currentColor;
+	border-radius: 2px;
+	padding: 19px 20px 23px 116px;
+	width: 280px;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+}
+
+.weather-card:before {
+	content: '';
+	display: block;
+	position: absolute;
+	background: rgba(130,130,130,0.1);
+	z-index: 0;
+	height: 19px;
+	top: 20px;
+	right: -17px;
+	width: 40px;
+	transform: rotate(45deg);
+}
+
+.weather-card > .icon {
+	position: absolute;
+	width: 116px;
+	height: 100%;
+	left: 0;
+	top: 0;
+	text-indent: -999px;
+}
+
+.weather-card > .location {
+	font-weight: normal;
+	font-size: 18px;
+	white-space: no-wrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 7px 0 0;
+	color: #fff;
+}
+
+.weather-card > .close {
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	color: inherit;
+	background: #fff;
+	display: block;
+	border-radius: 50%;
+	text-decoration: none;
+	width: 19px;
+	line-height: 1;
+	padding: 0 0 3px;
+	text-align: center;
+	z-index: 1;
+	overflow: hidden;
+	text-indent: -999px;
+}
+
+.weather-card > .close:before,
+.weather-card > .close:after {
+	content: '';
+	display: block;
+	position: absolute;
+	background: currentColor;
+	width: 11px;
+	height: 2px;
+	left: 4px;
+	top: 9px;
+}
+
+.weather-card > .close:before {
+	transform: rotate(45deg);
+}
+
+.weather-card > .close:after {
+	transform: rotate(-45deg);
+}
+
+.temperature {
+	font-size: 36px;
+	font-weight: lighter;
+	vertical-align: top;
+	color: #fff;
+	letter-spacing: -2px;
+}
+
+.temperature > .degrees {
+	letter-spacing: normal;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 5px;
+}
+
+
+.icon {
+	display: block;
+	background-position: center;
+	background-size: 80%;
+	background-repeat: no-repeat;
+}
+
+.icon-01d {
+	background-image: url("/src/img/2.svg");
+}
+
+.icon-01n {
+	background-image: url("/src/img/3.svg");
+}
+
+.icon-02d {
+	background-image: url("/src/img/8.svg");
+}
+
+.icon-02n {
+	background-image: url("/src/img/9.svg");
+}
+
+.icon-03d,
+.icon-03n {
+	background-image: url("/src/img/14.svg");
+}
+
+.icon-04d,
+.icon-04n {
+	background-image: url("/src/img/25.svg");
+	background-position: center 0;
+}
+
+.icon-09d,
+.icon-09n {
+	background-image: url("/src/img/18.svg");
+}
+
+.icon-10d,
+.icon-10n {
+	background-image: url("/src/img/17.svg");
+}
+
+.icon-11d,
+.icon-11n {
+	background-image: url("/src/img/16.svg");
+}
+
+.icon-13d,
+.icon-13n {
+	background-image: url("/src/img/23.svg");
+}
+
+.icon-50d {
+	background-image: url("/src/img/10.svg");
+}
+
+.icon-50n {
+	background-image: url("/src/img/11.svg");
+}
+
+footer .logo {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #search {
+    width: 100%;
+    height: auto;
+  }
+
+  #search form {
+    margin: 10px 7px;
+  }
+
+  #search form:after,
+  #search form:before {
+    content: none;
+  }
+
+  header .logo {
+    display: none;
+  }
+
+  footer .logo {
+    display: inline-block;
+  }
+}
